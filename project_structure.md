@@ -73,3 +73,14 @@ This microservice will allow storing passwords for all those accounts while keep
 
 
 # Technologies
+
+**Backend:**
+- Golang
+- PostgreSQL
+
+**Frontend:**
+- Flutter or ReactJS with Material UI
+
+**3rd Party Services:**
+- Google calendar integration
+- Slack integration
