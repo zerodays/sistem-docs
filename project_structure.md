@@ -1,8 +1,10 @@
-## The Goal
+# The Goal
 
-## Microservices
+The aim of the project is to create a simple CRM system that is tailored to the needs of the zerodays team.
 
-### Users
+# Microservices
+
+## Users
 
 This microservice mainly handles user authentication and keeps track of users' permissions.
 
@@ -14,7 +16,7 @@ Users with `user-edit` permission can create new users and managing user's permi
 - New user creation
 - User management (page for managing individual user's personal info and permissions and potentially user deletion)
 
-### Projects
+## Projects
 
 Developing new features on a certain project while maintaining several other projects requires great organization. The aim of this module is to have an overview of all active projects, keeping all deadlines under control. 
 
@@ -30,7 +32,7 @@ Each project can have several stages, where every stage has its own specificatio
 - Project details (page where one can see all of project stages, past, present and upcoming)
 - Edit project stage details
 
-### Payouts
+## Payouts
 
 Developers are not free and organising how much money the company needs to be payed and how much should go to the developers requires some sort of organizaiton. This module keeps track of all the payouts.
 
@@ -41,10 +43,11 @@ This module also keeps track of the money in the company and the amount that has
 **UI Pages:**
 - Monthly view of the payouts and expenses (buying items in inventory)
 - List of payouts that are overdue
-- Adding a payout
-- Editing a payout
+- Add a payout
+- Edit a payout
+- Delete a payout
 
-### Inventory
+## Inventory
 
 While working on multiple projects, one might have to buy some hardware, software licenses or food. This module keeps track of all items owned by the company.
 
@@ -56,12 +59,17 @@ Users with `inventory-edit` permission can create edit items in the inventory.
 - Item edit page
 
 
-### Per-Project Password Manager
+## Per-Project Password Manager
 
 Each project requires a lot of different accounts for various different products, i.e. cloud provider accout, DNS provider, accounts for differnent 3rd party APIs, Error logging services, etc.
 
 This microservice will allow storing passwords for all those accounts while keeping them secure. Each project will have a separate encrypted password storage, which can be accessed only by users working on that project.
 
+**UI Pages:**
+- List all accounts
+- Add and account
+- Edit an account
+- Delete an account
 
 
-## Technologies
+# Technologies
