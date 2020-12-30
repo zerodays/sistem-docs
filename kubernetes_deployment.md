@@ -44,3 +44,12 @@ Get logs in specific container:
 ```
 kubectl logs pod-name -c container-name
 ```
+
+#### Ingress
+
+Followed tutoral from [here](https://docs.microsoft.com/en-us/azure/aks/ingress-basic) which has a problem described [here](https://github.com/MicrosoftDocs/azure-docs/issues/47395). Problem still exists but can be fixed using command from [here](https://stackoverflow.com/questions/61365202/nginx-ingress-service-ingress-nginx-controller-admission-not-found).
+
+Get Ingress information
+```
+kubectl get services -o wide -w nginx-ingress-ingress-nginx-controller
+```

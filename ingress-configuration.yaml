@@ -1,0 +1,37 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          serviceName: sistem-file-upload
+          servicePort: 8080
+        path: /file-upload/(.*)
+      - backend:
+          serviceName: sistem-inventory
+          servicePort: 8081
+        path: /inventory/(.*)
+      - backend:
+          serviceName: sistem-meetings
+          servicePort: 8080
+        path: /meetings/(.*)
+      - backend:
+          serviceName: sistem-payments
+          servicePort: 8080
+        path: /payments/(.*)
+      - backend:
+          serviceName: sistem-projects
+          servicePort: 8080
+        path: /projects/(.*)
+      - backend:
+          serviceName: sistem-users
+          servicePort: 8080
+        path: /users/(.*)
